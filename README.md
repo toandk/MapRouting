@@ -9,6 +9,7 @@ Main features:
 - Choose starting point/destination by using current location (while enabling location service)
 - Choose transporting method: driving, transit, walking or bicycling
 - Draw routing path on the map base on starting point/destination and transporting mode
+- Swap starting point and destination location
 
 
 App using map and places data of GoogleMaps [SDK for iOS](https://developers.google.com/maps/documentation/ios-sdk/)
