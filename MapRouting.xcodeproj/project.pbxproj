@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F6A2EDD610F4827F1864BCE /* Pods_MapRouting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74E263A9E035F91F2994887 /* Pods_MapRouting.framework */; };
+		8437BFE71D6C430F00F4A2B9 /* MapRoutingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C991D6A0BCF00160D8F /* MapRoutingViewModel.m */; };
+		8437BFE81D6C431500F4A2B9 /* SearchAddressViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C731D684E6D00160D8F /* SearchAddressViewModel.m */; };
+		8437BFE91D6C431B00F4A2B9 /* SearchAddressServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C771D684F0C00160D8F /* SearchAddressServices.m */; };
+		8437BFEC1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437BFEB1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m */; };
+		84D37D9E1D6C67F4008E08AC /* DTPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D37D9D1D6C67F4008E08AC /* DTPlace.m */; };
+		84D37DA01D6CB577008E08AC /* SearchAddressViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D37D9F1D6CB577008E08AC /* SearchAddressViewModelTests.m */; };
+		84D37DA31D6CBDE6008E08AC /* FakeGMSPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D37DA21D6CBDE6008E08AC /* FakeGMSPrediction.m */; };
+		84E60C2E1D68173000160D8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C2D1D68173000160D8F /* main.m */; };
+		84E60C311D68173000160D8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C301D68173000160D8F /* AppDelegate.m */; };
+		84E60C391D68173000160D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E60C381D68173000160D8F /* Assets.xcassets */; };
+		84E60C3C1D68173000160D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E60C3A1D68173000160D8F /* LaunchScreen.storyboard */; };
+		84E60C501D6819FC00160D8F /* MapRoutingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C4E1D6819FC00160D8F /* MapRoutingViewController.m */; };
+		84E60C511D6819FC00160D8F /* MapRoutingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E60C4F1D6819FC00160D8F /* MapRoutingViewController.xib */; };
+		84E60C5E1D6845ED00160D8F /* AddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C5C1D6845ED00160D8F /* AddressPickerViewController.m */; };
+		84E60C5F1D6845ED00160D8F /* AddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E60C5D1D6845ED00160D8F /* AddressPickerViewController.xib */; };
+		84E60C641D684BC500160D8F /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C621D684BC500160D8F /* AddressTableViewCell.m */; };
+		84E60C651D684BC500160D8F /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E60C631D684BC500160D8F /* AddressTableViewCell.xib */; };
+		84E60C6B1D684CC900160D8F /* CETableViewBindingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C6A1D684CC900160D8F /* CETableViewBindingHelper.m */; };
+		84E60C711D684E2F00160D8F /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C701D684E2F00160D8F /* BaseViewModel.m */; };
+		84E60C741D684E6D00160D8F /* SearchAddressViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C731D684E6D00160D8F /* SearchAddressViewModel.m */; };
+		84E60C781D684F0C00160D8F /* SearchAddressServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C771D684F0C00160D8F /* SearchAddressServices.m */; };
+		84E60C7B1D68580400160D8F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C7A1D68580400160D8F /* BaseViewController.m */; };
+		84E60C7F1D69840500160D8F /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C7D1D69840500160D8F /* APIController.m */; };
+		84E60C831D6984C500160D8F /* APIController+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C821D6984C500160D8F /* APIController+Map.m */; };
+		84E60C881D69963900160D8F /* CustomPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C871D69963900160D8F /* CustomPlaceholderTextField.m */; };
+		84E60C8D1D69A1D300160D8F /* BaseUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C8C1D69A1D300160D8F /* BaseUIView.m */; };
+		84E60C9A1D6A0BCF00160D8F /* MapRoutingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C991D6A0BCF00160D8F /* MapRoutingViewModel.m */; };
+		84E60CA81D6B479200160D8F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C951D69A5CF00160D8F /* LocationManager.m */; };
+		AC775C3A45CC80BF34FE9209 /* Pods_MapRoutingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0727F41B7C20EFB873E485A /* Pods_MapRoutingTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8437BFE21D6C40C800F4A2B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84E60C211D68173000160D8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84E60C281D68173000160D8F;
+			remoteInfo = MapRouting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8437BFDD1D6C40C800F4A2B9 /* MapRoutingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapRoutingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8437BFE11D6C40C800F4A2B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8437BFEB1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRoutingViewModelTests.m; sourceTree = "<group>"; };
+		849393381D6C5A57009A7833 /* MapRoutingTests-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MapRoutingTests-prefix.pch"; sourceTree = "<group>"; };
+		84D37D9C1D6C67F4008E08AC /* DTPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlace.h; sourceTree = "<group>"; };
+		84D37D9D1D6C67F4008E08AC /* DTPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPlace.m; sourceTree = "<group>"; };
+		84D37D9F1D6CB577008E08AC /* SearchAddressViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAddressViewModelTests.m; sourceTree = "<group>"; };
+		84D37DA11D6CBDE6008E08AC /* FakeGMSPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeGMSPrediction.h; sourceTree = "<group>"; };
+		84D37DA21D6CBDE6008E08AC /* FakeGMSPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeGMSPrediction.m; sourceTree = "<group>"; };
+		84E60C291D68173000160D8F /* MapRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E60C2D1D68173000160D8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84E60C2F1D68173000160D8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84E60C301D68173000160D8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84E60C381D68173000160D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84E60C3B1D68173000160D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84E60C3D1D68173000160D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E60C4D1D6819FC00160D8F /* MapRoutingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRoutingViewController.h; sourceTree = "<group>"; };
+		84E60C4E1D6819FC00160D8F /* MapRoutingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRoutingViewController.m; sourceTree = "<group>"; };
+		84E60C4F1D6819FC00160D8F /* MapRoutingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapRoutingViewController.xib; sourceTree = "<group>"; };
+		84E60C531D681B6A00160D8F /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		84E60C5B1D6845ED00160D8F /* AddressPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPickerViewController.h; sourceTree = "<group>"; };
+		84E60C5C1D6845ED00160D8F /* AddressPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerViewController.m; sourceTree = "<group>"; };
+		84E60C5D1D6845ED00160D8F /* AddressPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressPickerViewController.xib; sourceTree = "<group>"; };
+		84E60C611D684BC500160D8F /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
+		84E60C621D684BC500160D8F /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
+		84E60C631D684BC500160D8F /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		84E60C681D684CC900160D8F /* CEReactiveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEReactiveView.h; sourceTree = "<group>"; };
+		84E60C691D684CC900160D8F /* CETableViewBindingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CETableViewBindingHelper.h; sourceTree = "<group>"; };
+		84E60C6A1D684CC900160D8F /* CETableViewBindingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CETableViewBindingHelper.m; sourceTree = "<group>"; };
+		84E60C6F1D684E2F00160D8F /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
+		84E60C701D684E2F00160D8F /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
+		84E60C721D684E6D00160D8F /* SearchAddressViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAddressViewModel.h; sourceTree = "<group>"; };
+		84E60C731D684E6D00160D8F /* SearchAddressViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAddressViewModel.m; sourceTree = "<group>"; };
+		84E60C761D684F0C00160D8F /* SearchAddressServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchAddressServices.h; sourceTree = "<group>"; };
+		84E60C771D684F0C00160D8F /* SearchAddressServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAddressServices.m; sourceTree = "<group>"; };
+		84E60C791D68580400160D8F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		84E60C7A1D68580400160D8F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		84E60C7D1D69840500160D8F /* APIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
+		84E60C7E1D69840500160D8F /* APIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
+		84E60C801D69848600160D8F /* APIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIConstants.h; sourceTree = "<group>"; };
+		84E60C811D6984C500160D8F /* APIController+Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "APIController+Map.h"; sourceTree = "<group>"; };
+		84E60C821D6984C500160D8F /* APIController+Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "APIController+Map.m"; sourceTree = "<group>"; };
+		84E60C861D69963900160D8F /* CustomPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPlaceholderTextField.h; sourceTree = "<group>"; };
+		84E60C871D69963900160D8F /* CustomPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPlaceholderTextField.m; sourceTree = "<group>"; };
+		84E60C8B1D69A1D300160D8F /* BaseUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIView.h; sourceTree = "<group>"; };
+		84E60C8C1D69A1D300160D8F /* BaseUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIView.m; sourceTree = "<group>"; };
+		84E60C941D69A5CF00160D8F /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		84E60C951D69A5CF00160D8F /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		84E60C981D6A0BCF00160D8F /* MapRoutingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapRoutingViewModel.h; sourceTree = "<group>"; };
+		84E60C991D6A0BCF00160D8F /* MapRoutingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapRoutingViewModel.m; sourceTree = "<group>"; };
+		A621DBAB9D7057D3E6593D76 /* Pods-MapRouting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapRouting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapRouting/Pods-MapRouting.debug.xcconfig"; sourceTree = "<group>"; };
+		A74E263A9E035F91F2994887 /* Pods_MapRouting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapRouting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0727F41B7C20EFB873E485A /* Pods_MapRoutingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapRoutingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7CFE282013C7202E4CE2662 /* Pods-MapRoutingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapRoutingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MapRoutingTests/Pods-MapRoutingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E82AE7844772D5A764291CDD /* Pods-MapRoutingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapRoutingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapRoutingTests/Pods-MapRoutingTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF49F5A92394B9FC71BFE15A /* Pods-MapRouting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapRouting.release.xcconfig"; path = "Pods/Target Support Files/Pods-MapRouting/Pods-MapRouting.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8437BFDA1D6C40C800F4A2B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC775C3A45CC80BF34FE9209 /* Pods_MapRoutingTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E60C261D68173000160D8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6A2EDD610F4827F1864BCE /* Pods_MapRouting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47378F274467B10EA133D756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A74E263A9E035F91F2994887 /* Pods_MapRouting.framework */,
+				C0727F41B7C20EFB873E485A /* Pods_MapRoutingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EA54097B5E4B36F008AEDD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A621DBAB9D7057D3E6593D76 /* Pods-MapRouting.debug.xcconfig */,
+				FF49F5A92394B9FC71BFE15A /* Pods-MapRouting.release.xcconfig */,
+				D7CFE282013C7202E4CE2662 /* Pods-MapRoutingTests.debug.xcconfig */,
+				E82AE7844772D5A764291CDD /* Pods-MapRoutingTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8437BFDE1D6C40C800F4A2B9 /* MapRoutingTests */ = {
+			isa = PBXGroup;
+			children = (
+				84EF5E331D6D7F260020EE08 /* Tests */,
+				84EF5E321D6D7F1D0020EE08 /* Fake */,
+				84EF5E311D6D7F120020EE08 /* Supporting Files */,
+			);
+			path = MapRoutingTests;
+			sourceTree = "<group>";
+		};
+		84D37D9B1D6C67E0008E08AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84D37D9C1D6C67F4008E08AC /* DTPlace.h */,
+				84D37D9D1D6C67F4008E08AC /* DTPlace.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84E60C201D68173000160D8F = {
+			isa = PBXGroup;
+			children = (
+				84E60C2B1D68173000160D8F /* MapRouting */,
+				8437BFDE1D6C40C800F4A2B9 /* MapRoutingTests */,
+				84E60C2A1D68173000160D8F /* Products */,
+				6EA54097B5E4B36F008AEDD6 /* Pods */,
+				47378F274467B10EA133D756 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84E60C2A1D68173000160D8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C291D68173000160D8F /* MapRouting.app */,
+				8437BFDD1D6C40C800F4A2B9 /* MapRoutingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84E60C2B1D68173000160D8F /* MapRouting */ = {
+			isa = PBXGroup;
+			children = (
+				84EF5E341D6D8B4B0020EE08 /* AppDelegate */,
+				84E60C6D1D684E0900160D8F /* BaseClass */,
+				84E60C661D684C8E00160D8F /* Libraries */,
+				84E60C521D681B4700160D8F /* Config */,
+				84E60C431D68174B00160D8F /* ViewController */,
+				84E60C2C1D68173000160D8F /* Supporting Files */,
+			);
+			path = MapRouting;
+			sourceTree = "<group>";
+		};
+		84E60C2C1D68173000160D8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C381D68173000160D8F /* Assets.xcassets */,
+				84E60C3A1D68173000160D8F /* LaunchScreen.storyboard */,
+				84E60C3D1D68173000160D8F /* Info.plist */,
+				84E60C2D1D68173000160D8F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84E60C431D68174B00160D8F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C5A1D6845B700160D8F /* AddressPicker */,
+				84E60C4C1D68199700160D8F /* MapRoutingViewController */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		84E60C4C1D68199700160D8F /* MapRoutingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84D37D9B1D6C67E0008E08AC /* Model */,
+				84E60C971D6A0BB300160D8F /* ViewModel */,
+				84E60C4D1D6819FC00160D8F /* MapRoutingViewController.h */,
+				84E60C4E1D6819FC00160D8F /* MapRoutingViewController.m */,
+				84E60C4F1D6819FC00160D8F /* MapRoutingViewController.xib */,
+			);
+			path = MapRoutingViewController;
+			sourceTree = "<group>";
+		};
+		84E60C521D681B4700160D8F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C531D681B6A00160D8F /* AppConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		84E60C5A1D6845B700160D8F /* AddressPicker */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C891D69A19F00160D8F /* View */,
+				84E60C751D684EA500160D8F /* Model */,
+				84E60C6C1D684DC900160D8F /* ViewModel */,
+			);
+			path = AddressPicker;
+			sourceTree = "<group>";
+		};
+		84E60C601D684BA600160D8F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C611D684BC500160D8F /* AddressTableViewCell.h */,
+				84E60C621D684BC500160D8F /* AddressTableViewCell.m */,
+				84E60C631D684BC500160D8F /* AddressTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		84E60C661D684C8E00160D8F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C931D69A5AE00160D8F /* LocationManager */,
+				84E60C851D6995A900160D8F /* CustomView */,
+				84E60C671D684CAA00160D8F /* CETableBindingHelper */,
+				84E60C7C1D6983E500160D8F /* APIController */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		84E60C671D684CAA00160D8F /* CETableBindingHelper */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C681D684CC900160D8F /* CEReactiveView.h */,
+				84E60C691D684CC900160D8F /* CETableViewBindingHelper.h */,
+				84E60C6A1D684CC900160D8F /* CETableViewBindingHelper.m */,
+			);
+			path = CETableBindingHelper;
+			sourceTree = "<group>";
+		};
+		84E60C6C1D684DC900160D8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C721D684E6D00160D8F /* SearchAddressViewModel.h */,
+				84E60C731D684E6D00160D8F /* SearchAddressViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		84E60C6D1D684E0900160D8F /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C791D68580400160D8F /* BaseViewController.h */,
+				84E60C7A1D68580400160D8F /* BaseViewController.m */,
+				84E60C8B1D69A1D300160D8F /* BaseUIView.h */,
+				84E60C8C1D69A1D300160D8F /* BaseUIView.m */,
+				84E60C6F1D684E2F00160D8F /* BaseViewModel.h */,
+				84E60C701D684E2F00160D8F /* BaseViewModel.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		84E60C751D684EA500160D8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C761D684F0C00160D8F /* SearchAddressServices.h */,
+				84E60C771D684F0C00160D8F /* SearchAddressServices.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84E60C7C1D6983E500160D8F /* APIController */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C7E1D69840500160D8F /* APIController.h */,
+				84E60C7D1D69840500160D8F /* APIController.m */,
+				84E60C811D6984C500160D8F /* APIController+Map.h */,
+				84E60C821D6984C500160D8F /* APIController+Map.m */,
+				84E60C801D69848600160D8F /* APIConstants.h */,
+			);
+			path = APIController;
+			sourceTree = "<group>";
+		};
+		84E60C851D6995A900160D8F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C861D69963900160D8F /* CustomPlaceholderTextField.h */,
+				84E60C871D69963900160D8F /* CustomPlaceholderTextField.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		84E60C891D69A19F00160D8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C601D684BA600160D8F /* Cell */,
+				84E60C5B1D6845ED00160D8F /* AddressPickerViewController.h */,
+				84E60C5C1D6845ED00160D8F /* AddressPickerViewController.m */,
+				84E60C5D1D6845ED00160D8F /* AddressPickerViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84E60C931D69A5AE00160D8F /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C941D69A5CF00160D8F /* LocationManager.h */,
+				84E60C951D69A5CF00160D8F /* LocationManager.m */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		84E60C971D6A0BB300160D8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C981D6A0BCF00160D8F /* MapRoutingViewModel.h */,
+				84E60C991D6A0BCF00160D8F /* MapRoutingViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		84EF5E311D6D7F120020EE08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				849393381D6C5A57009A7833 /* MapRoutingTests-prefix.pch */,
+				8437BFE11D6C40C800F4A2B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84EF5E321D6D7F1D0020EE08 /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				84D37DA11D6CBDE6008E08AC /* FakeGMSPrediction.h */,
+				84D37DA21D6CBDE6008E08AC /* FakeGMSPrediction.m */,
+			);
+			name = Fake;
+			sourceTree = "<group>";
+		};
+		84EF5E331D6D7F260020EE08 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8437BFEB1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m */,
+				84D37D9F1D6CB577008E08AC /* SearchAddressViewModelTests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		84EF5E341D6D8B4B0020EE08 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				84E60C2F1D68173000160D8F /* AppDelegate.h */,
+				84E60C301D68173000160D8F /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8437BFDC1D6C40C800F4A2B9 /* MapRoutingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8437BFE61D6C40C800F4A2B9 /* Build configuration list for PBXNativeTarget "MapRoutingTests" */;
+			buildPhases = (
+				D4D12D371468FD8E68C8B22A /* [CP] Check Pods Manifest.lock */,
+				8437BFD91D6C40C800F4A2B9 /* Sources */,
+				8437BFDA1D6C40C800F4A2B9 /* Frameworks */,
+				8437BFDB1D6C40C800F4A2B9 /* Resources */,
+				28F0ADF795A5434A67927C12 /* [CP] Embed Pods Frameworks */,
+				E4199D191866D8CC6DBE2A28 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8437BFE31D6C40C800F4A2B9 /* PBXTargetDependency */,
+			);
+			name = MapRoutingTests;
+			productName = MapRoutingTests;
+			productReference = 8437BFDD1D6C40C800F4A2B9 /* MapRoutingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84E60C281D68173000160D8F /* MapRouting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84E60C401D68173000160D8F /* Build configuration list for PBXNativeTarget "MapRouting" */;
+			buildPhases = (
+				3027E4B20DDE2F95A7E96802 /* [CP] Check Pods Manifest.lock */,
+				84E60C251D68173000160D8F /* Sources */,
+				84E60C261D68173000160D8F /* Frameworks */,
+				84E60C271D68173000160D8F /* Resources */,
+				B15CEC2402C2D278823CF13C /* [CP] Embed Pods Frameworks */,
+				2C8F29C23DB7F4D09C751FF9 /* [CP] Copy Pods Resources */,
+				84D37DA41D6D4D5C008E08AC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapRouting;
+			productName = MapRouting;
+			productReference = 84E60C291D68173000160D8F /* MapRouting.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84E60C211D68173000160D8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					8437BFDC1D6C40C800F4A2B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 84E60C281D68173000160D8F;
+					};
+					84E60C281D68173000160D8F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 84E60C241D68173000160D8F /* Build configuration list for PBXProject "MapRouting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84E60C201D68173000160D8F;
+			productRefGroup = 84E60C2A1D68173000160D8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84E60C281D68173000160D8F /* MapRouting */,
+				8437BFDC1D6C40C800F4A2B9 /* MapRoutingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8437BFDB1D6C40C800F4A2B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E60C271D68173000160D8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E60C5F1D6845ED00160D8F /* AddressPickerViewController.xib in Resources */,
+				84E60C3C1D68173000160D8F /* LaunchScreen.storyboard in Resources */,
+				84E60C511D6819FC00160D8F /* MapRoutingViewController.xib in Resources */,
+				84E60C651D684BC500160D8F /* AddressTableViewCell.xib in Resources */,
+				84E60C391D68173000160D8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F0ADF795A5434A67927C12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapRoutingTests/Pods-MapRoutingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C8F29C23DB7F4D09C751FF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapRouting/Pods-MapRouting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3027E4B20DDE2F95A7E96802 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84D37DA41D6D4D5C008E08AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 9307500df4ba07332855a77556463d83cff64d29 8db8d0e42338d998d2b0bae493f236f5aabbd7736aefa0fe56dfa86d06e1afe0";
+		};
+		B15CEC2402C2D278823CF13C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapRouting/Pods-MapRouting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4D12D371468FD8E68C8B22A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4199D191866D8CC6DBE2A28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MapRoutingTests/Pods-MapRoutingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8437BFD91D6C40C800F4A2B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8437BFE81D6C431500F4A2B9 /* SearchAddressViewModel.m in Sources */,
+				8437BFEC1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m in Sources */,
+				84D37DA01D6CB577008E08AC /* SearchAddressViewModelTests.m in Sources */,
+				84D37DA31D6CBDE6008E08AC /* FakeGMSPrediction.m in Sources */,
+				8437BFE71D6C430F00F4A2B9 /* MapRoutingViewModel.m in Sources */,
+				8437BFE91D6C431B00F4A2B9 /* SearchAddressServices.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E60C251D68173000160D8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E60CA81D6B479200160D8F /* LocationManager.m in Sources */,
+				84E60C641D684BC500160D8F /* AddressTableViewCell.m in Sources */,
+				84E60C7B1D68580400160D8F /* BaseViewController.m in Sources */,
+				84E60C9A1D6A0BCF00160D8F /* MapRoutingViewModel.m in Sources */,
+				84E60C711D684E2F00160D8F /* BaseViewModel.m in Sources */,
+				84E60C501D6819FC00160D8F /* MapRoutingViewController.m in Sources */,
+				84E60C881D69963900160D8F /* CustomPlaceholderTextField.m in Sources */,
+				84E60C781D684F0C00160D8F /* SearchAddressServices.m in Sources */,
+				84E60C831D6984C500160D8F /* APIController+Map.m in Sources */,
+				84E60C311D68173000160D8F /* AppDelegate.m in Sources */,
+				84E60C2E1D68173000160D8F /* main.m in Sources */,
+				84D37D9E1D6C67F4008E08AC /* DTPlace.m in Sources */,
+				84E60C8D1D69A1D300160D8F /* BaseUIView.m in Sources */,
+				84E60C741D684E6D00160D8F /* SearchAddressViewModel.m in Sources */,
+				84E60C7F1D69840500160D8F /* APIController.m in Sources */,
+				84E60C6B1D684CC900160D8F /* CETableViewBindingHelper.m in Sources */,
+				84E60C5E1D6845ED00160D8F /* AddressPickerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8437BFE31D6C40C800F4A2B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84E60C281D68173000160D8F /* MapRouting */;
+			targetProxy = 8437BFE21D6C40C800F4A2B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84E60C3A1D68173000160D8F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84E60C3B1D68173000160D8F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8437BFE41D6C40C800F4A2B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7CFE282013C7202E4CE2662 /* Pods-MapRoutingTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapRoutingTests/MapRoutingTests-prefix.pch";
+				INFOPLIST_FILE = MapRoutingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toandk.MapRoutingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapRouting.app/MapRouting";
+			};
+			name = Debug;
+		};
+		8437BFE51D6C40C800F4A2B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82AE7844772D5A764291CDD /* Pods-MapRoutingTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapRoutingTests/MapRoutingTests-prefix.pch";
+				INFOPLIST_FILE = MapRoutingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toandk.MapRoutingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapRouting.app/MapRouting";
+			};
+			name = Release;
+		};
+		84E60C3E1D68173000160D8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84E60C3F1D68173000160D8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84E60C411D68173000160D8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A621DBAB9D7057D3E6593D76 /* Pods-MapRouting.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MapRouting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toandk.maprouting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84E60C421D68173000160D8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF49F5A92394B9FC71BFE15A /* Pods-MapRouting.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ha Kien (29R422WX4K)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ha Kien (29R422WX4K)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MapRouting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = toandk.maprouting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "545e5eac-42f4-4662-bc7f-a6abd5e33623";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8437BFE61D6C40C800F4A2B9 /* Build configuration list for PBXNativeTarget "MapRoutingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8437BFE41D6C40C800F4A2B9 /* Debug */,
+				8437BFE51D6C40C800F4A2B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84E60C241D68173000160D8F /* Build configuration list for PBXProject "MapRouting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E60C3E1D68173000160D8F /* Debug */,
+				84E60C3F1D68173000160D8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84E60C401D68173000160D8F /* Build configuration list for PBXNativeTarget "MapRouting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E60C411D68173000160D8F /* Debug */,
+				84E60C421D68173000160D8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84E60C211D68173000160D8F /* Project object */;
+}

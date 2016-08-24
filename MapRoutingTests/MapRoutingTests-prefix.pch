@@ -1,0 +1,21 @@
+//
+//  MapRoutingViewModelTests.pch
+//  MapRouting
+//
+//  Created by admin on 8/23/16.
+//  Copyright © 2016 admin. All rights reserved.
+//
+
+#ifndef MapRoutingViewModelTests_pch
+#define MapRoutingViewModelTests_pch
+
+@import Foundation;
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
+#import <Specta/Specta.h>
+#define EXP_SHORTHAND
+#import <Expecta/Expecta.h>
+
+#endif /* MapRoutingViewModelTests_pch */

@@ -1,0 +1,84 @@
+PODS:
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
+  - Expecta (0.3.2)
+  - Fabric (1.6.7)
+  - GoogleMaps (2.0.1):
+    - GoogleMaps/Maps (= 2.0.1)
+  - GoogleMaps/Base (2.0.1)
+  - GoogleMaps/Maps (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
+  - GooglePlacePicker (2.0.1):
+    - GoogleMaps (= 2.0.1)
+    - GooglePlaces (= 2.0.1)
+  - GooglePlaces (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
+  - OCMock (2.2.4)
+  - PermissionScope (1.0.2)
+  - ReactiveCocoa (2.1.8):
+    - ReactiveCocoa/Core (= 2.1.8)
+    - ReactiveCocoa/no-arc (= 2.1.8)
+  - ReactiveCocoa/Core (2.1.8):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.1.8)
+  - ReactiveViewModel (0.2):
+    - ReactiveCocoa (~> 2.1)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - AFNetworkActivityLogger
+  - AFNetworking (~> 2.5)
+  - Crashlytics
+  - Expecta (~> 0.3.0)
+  - Fabric
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - OCMock (~> 2.2.1)
+  - PermissionScope
+  - ReactiveCocoa (= 2.1.8)
+  - ReactiveViewModel
+  - Specta (~> 0.2.1)
+
+SPEC CHECKSUMS:
+  AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
+  Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  GooglePlacePicker: e7b11b732e40dbe76e8ab4c5fc2f4a7c32b96578
+  GooglePlaces: 72fab1d1651c6df0322f2aad245ffb15b80d3c56
+  OCMock: a6a7dc0e3997fb9f35d99f72528698ebf60d64f2
+  PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
+  ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
+  ReactiveViewModel: 3b25ab68711944b1706b9dd6d1b37f37cbe6b094
+  Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
+
+PODFILE CHECKSUM: a9b77ea18f99091aab7cc4b20d49ace42098a27d
+
+COCOAPODS: 1.1.0.beta.1
