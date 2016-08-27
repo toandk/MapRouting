@@ -12,6 +12,12 @@
 #import "LocationManager.h"
 #import "AppConfig.h"
 
+@interface MapRoutingViewModel () {
+    GMSPlacesClient *placeClient;
+}
+
+@end
+
 @implementation MapRoutingViewModel
 
 - (instancetype)init {
@@ -23,6 +29,7 @@
 
 - (void)initialize {
     _transportMode = DTTransportingModeDriving;
+    placeClient = [GMSPlacesClient sharedClient];
     
     [self initCurrentPlaceCommand];
     [self initReverseDirectionCommand];
@@ -116,7 +123,7 @@
     @weakify(self)
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self)
-        [[GMSPlacesClient sharedClient] currentPlaceWithCallback:^(GMSPlaceLikelihoodList *likelihoodList, NSError *error) {
+        [placeClient currentPlaceWithCallback:^(GMSPlaceLikelihoodList *likelihoodList, NSError *error) {
             if (likelihoodList.likelihoods.count > 0) {
                 @strongify(self);
                 self.currentPlace = [[DTPlace alloc] initWithGMSPlace:[likelihoodList.likelihoods[0] place]];

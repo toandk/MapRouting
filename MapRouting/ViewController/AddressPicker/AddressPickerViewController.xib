@@ -53,7 +53,7 @@
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="Your location" image="ic_qu_navigation" backgroundImage="i-row-bottom">
+                    <state key="normal" title="Your location" image="ic_qu_navigation" backgroundImage="i-row-center">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -76,16 +76,16 @@
                     </connections>
                 </textField>
                 <view hidden="YES" contentMode="scaleToFill" id="2u0-Ls-bbB">
-                    <rect key="frame" x="8" y="70" width="304" height="493"/>
+                    <rect key="frame" x="8" y="150" width="304" height="413"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i-row-bottom" id="Ggc-jI-Bvv">
-                            <rect key="frame" x="0.0" y="0.0" width="304" height="493"/>
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="413"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <rect key="contentStretch" x="0.20000000000000001" y="0.20000000000000001" width="0.0" height="0.0"/>
                         </imageView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ca2-Bg-2ql">
-                            <rect key="frame" x="1" y="1" width="302" height="491"/>
+                            <rect key="frame" x="1" y="1" width="302" height="411"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </tableView>

@@ -34,8 +34,13 @@
     GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
     filter.type = kGMSPlacesAutocompleteTypeFilterAddress;
     
+    CLLocationCoordinate2D neBoundsCorner = CLLocationCoordinate2DMake(20.7639049,101.0939519);
+    CLLocationCoordinate2D swBoundsCorner = CLLocationCoordinate2DMake(15.1599211,101.0221149);
+    GMSCoordinateBounds *VietNamBounds = [[GMSCoordinateBounds alloc] initWithCoordinate:neBoundsCorner
+                                                                       coordinate:swBoundsCorner];
+    
     // Create the fetcher.
-    _fetcher = [[GMSAutocompleteFetcher alloc] initWithBounds:nil
+    _fetcher = [[GMSAutocompleteFetcher alloc] initWithBounds:VietNamBounds
                                                        filter:filter];
     _fetcher.delegate = self;
 }

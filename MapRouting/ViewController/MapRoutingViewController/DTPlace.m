@@ -21,4 +21,10 @@
     return self;
 }
 
+- (NSString*)formattedAddress {
+    if (_formattedAddress && _formattedAddress.length > 0) return _formattedAddress;
+    if (_name && _name.length > 0) return _name;
+    return [NSString stringWithFormat:@"(%f, %f)", _coordinate.latitude, _coordinate.longitude];
+}
+
 @end

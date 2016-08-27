@@ -59,6 +59,9 @@
         else searchTextField.text = self.viewModel.defaultPlace.name;
     }
     yourLocationButton.hidden = !self.viewModel.currentPlace;
+    float posY = self.viewModel.currentPlace ? yourLocationButton.frame.origin.y + yourLocationButton.frame.size.height :
+                yourLocationButton.frame.origin.y;
+    resultView.frame = CGRectMake(resultView.frame.origin.x, posY, resultView.frame.size.width, self.view.frame.size.height - posY - 10);
 }
 
 - (void)bindTableView {
@@ -113,7 +116,8 @@
     
     [_placePicker pickPlaceWithCallback:^(GMSPlace *place, NSError *error) {
         if (place != nil) {
-            completionBlock(place, nil);
+            DTPlace *newPlace = [[DTPlace alloc] initWithGMSPlace:place];
+            completionBlock(newPlace, nil);
             [self closeAction:nil]; 
         }
     }];

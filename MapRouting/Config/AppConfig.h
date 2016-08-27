@@ -11,8 +11,8 @@
 
 #define GOOGLE_MAP_API_KEY  @"AIzaSyAw1R60pnySGfCQ-DXmmLNeFn-uPtK-7Ng"
 
-#define DEFAULT_LONGITUDE   105.8342
-#define DEFAULT_LATITUDE    21.0278
+#define DEFAULT_LONGITUDE   106.7128854
+#define DEFAULT_LATITUDE    10.7231119
 
 #define NO_ROUTE_KEY        @"No route"
 
