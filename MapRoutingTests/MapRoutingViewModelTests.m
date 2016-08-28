@@ -8,10 +8,16 @@
 
 #import "MapRoutingViewModel.h"
 #import "AppConfig.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 SpecBegin(MapRoutingViewModel)
 
 __block MapRoutingViewModel *viewModel = nil;
+
+beforeAll(^{
+    [GMSServices provideAPIKey:GOOGLE_MAP_API_KEY];
+    [GMSPlacesClient provideAPIKey:GOOGLE_MAP_API_KEY];
+});
 
 describe(@"initialize", ^{
     beforeAll(^{

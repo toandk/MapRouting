@@ -17,6 +17,7 @@
 @property (strong, nonatomic) RACCommand *executeSearchCommand;
 @property (strong, nonatomic) RACSignal *validSearchSignal;
 @property (strong, nonatomic) NSArray *searchResults;
+@property (strong, nonatomic) NSArray *searchHistories;
 @property (strong, nonatomic) DTPlace *selectedPlace;
 @property (strong, nonatomic) DTPlace *defaultPlace;
 @property (strong, nonatomic) DTPlace *currentPlace;
@@ -25,6 +26,8 @@
 - (instancetype) initWithServices:(SearchAddressServices*)services withModel:(DTPlace*)place;
 
 - (RACCommand*)getSelectionAddressCommand;
+
+- (RACCommand*)getSelectionHistorySearchCommand;
 
 - (RACCommand*)getChoosingCurrentLocationCommand;
 

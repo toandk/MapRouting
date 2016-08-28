@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		7F6A2EDD610F4827F1864BCE /* Pods_MapRouting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74E263A9E035F91F2994887 /* Pods_MapRouting.framework */; };
-		8437BFE71D6C430F00F4A2B9 /* MapRoutingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C991D6A0BCF00160D8F /* MapRoutingViewModel.m */; };
 		8437BFE81D6C431500F4A2B9 /* SearchAddressViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C731D684E6D00160D8F /* SearchAddressViewModel.m */; };
 		8437BFE91D6C431B00F4A2B9 /* SearchAddressServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C771D684F0C00160D8F /* SearchAddressServices.m */; };
 		8437BFEC1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8437BFEB1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m */; };
 		84D37D9E1D6C67F4008E08AC /* DTPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D37D9D1D6C67F4008E08AC /* DTPlace.m */; };
 		84D37DA01D6CB577008E08AC /* SearchAddressViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D37D9F1D6CB577008E08AC /* SearchAddressViewModelTests.m */; };
 		84D37DA31D6CBDE6008E08AC /* FakeGMSPrediction.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D37DA21D6CBDE6008E08AC /* FakeGMSPrediction.m */; };
+		84E00A961D71F3D4003B7344 /* SearchHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E00A941D71F3D4003B7344 /* SearchHistoryCell.m */; };
+		84E00A971D71F3D4003B7344 /* SearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E00A951D71F3D4003B7344 /* SearchHistoryCell.xib */; };
+		84E00A9A1D71FCCA003B7344 /* SearchRecentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E00A991D71FCCA003B7344 /* SearchRecentModel.m */; };
+		84E00A9C1D72122D003B7344 /* MapRoutingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C991D6A0BCF00160D8F /* MapRoutingViewModel.m */; };
+		84E00A9F1D72146D003B7344 /* SearchRecentModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E00A9E1D72146D003B7344 /* SearchRecentModelFactory.m */; };
 		84E60C2E1D68173000160D8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C2D1D68173000160D8F /* main.m */; };
 		84E60C311D68173000160D8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E60C301D68173000160D8F /* AppDelegate.m */; };
 		84E60C391D68173000160D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E60C381D68173000160D8F /* Assets.xcassets */; };
@@ -59,6 +63,13 @@
 		84D37D9F1D6CB577008E08AC /* SearchAddressViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchAddressViewModelTests.m; sourceTree = "<group>"; };
 		84D37DA11D6CBDE6008E08AC /* FakeGMSPrediction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeGMSPrediction.h; sourceTree = "<group>"; };
 		84D37DA21D6CBDE6008E08AC /* FakeGMSPrediction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeGMSPrediction.m; sourceTree = "<group>"; };
+		84E00A931D71F3D4003B7344 /* SearchHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHistoryCell.h; sourceTree = "<group>"; };
+		84E00A941D71F3D4003B7344 /* SearchHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHistoryCell.m; sourceTree = "<group>"; };
+		84E00A951D71F3D4003B7344 /* SearchHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchHistoryCell.xib; sourceTree = "<group>"; };
+		84E00A981D71FCCA003B7344 /* SearchRecentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRecentModel.h; sourceTree = "<group>"; };
+		84E00A991D71FCCA003B7344 /* SearchRecentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRecentModel.m; sourceTree = "<group>"; };
+		84E00A9D1D72146D003B7344 /* SearchRecentModelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRecentModelFactory.h; sourceTree = "<group>"; };
+		84E00A9E1D72146D003B7344 /* SearchRecentModelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRecentModelFactory.m; sourceTree = "<group>"; };
 		84E60C291D68173000160D8F /* MapRouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapRouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E60C2D1D68173000160D8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84E60C2F1D68173000160D8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -256,6 +267,9 @@
 				84E60C611D684BC500160D8F /* AddressTableViewCell.h */,
 				84E60C621D684BC500160D8F /* AddressTableViewCell.m */,
 				84E60C631D684BC500160D8F /* AddressTableViewCell.xib */,
+				84E00A931D71F3D4003B7344 /* SearchHistoryCell.h */,
+				84E00A941D71F3D4003B7344 /* SearchHistoryCell.m */,
+				84E00A951D71F3D4003B7344 /* SearchHistoryCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -308,6 +322,10 @@
 			children = (
 				84E60C761D684F0C00160D8F /* SearchAddressServices.h */,
 				84E60C771D684F0C00160D8F /* SearchAddressServices.m */,
+				84E00A981D71FCCA003B7344 /* SearchRecentModel.h */,
+				84E00A991D71FCCA003B7344 /* SearchRecentModel.m */,
+				84E00A9D1D72146D003B7344 /* SearchRecentModelFactory.h */,
+				84E00A9E1D72146D003B7344 /* SearchRecentModelFactory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -494,6 +512,7 @@
 			files = (
 				84E60C5F1D6845ED00160D8F /* AddressPickerViewController.xib in Resources */,
 				84E60C3C1D68173000160D8F /* LaunchScreen.storyboard in Resources */,
+				84E00A971D71F3D4003B7344 /* SearchHistoryCell.xib in Resources */,
 				84E60C511D6819FC00160D8F /* MapRoutingViewController.xib in Resources */,
 				84E60C651D684BC500160D8F /* AddressTableViewCell.xib in Resources */,
 				84E60C391D68173000160D8F /* Assets.xcassets in Resources */,
@@ -617,8 +636,8 @@
 				8437BFEC1D6C442E00F4A2B9 /* MapRoutingViewModelTests.m in Sources */,
 				84D37DA01D6CB577008E08AC /* SearchAddressViewModelTests.m in Sources */,
 				84D37DA31D6CBDE6008E08AC /* FakeGMSPrediction.m in Sources */,
-				8437BFE71D6C430F00F4A2B9 /* MapRoutingViewModel.m in Sources */,
 				8437BFE91D6C431B00F4A2B9 /* SearchAddressServices.m in Sources */,
+				84E00A9C1D72122D003B7344 /* MapRoutingViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +649,7 @@
 				84E60C641D684BC500160D8F /* AddressTableViewCell.m in Sources */,
 				84E60C7B1D68580400160D8F /* BaseViewController.m in Sources */,
 				84E60C9A1D6A0BCF00160D8F /* MapRoutingViewModel.m in Sources */,
+				84E00A961D71F3D4003B7344 /* SearchHistoryCell.m in Sources */,
 				84E60C711D684E2F00160D8F /* BaseViewModel.m in Sources */,
 				84E60C501D6819FC00160D8F /* MapRoutingViewController.m in Sources */,
 				84E60C881D69963900160D8F /* CustomPlaceholderTextField.m in Sources */,
@@ -638,11 +658,13 @@
 				84E60C311D68173000160D8F /* AppDelegate.m in Sources */,
 				84E60C2E1D68173000160D8F /* main.m in Sources */,
 				84D37D9E1D6C67F4008E08AC /* DTPlace.m in Sources */,
+				84E00A9F1D72146D003B7344 /* SearchRecentModelFactory.m in Sources */,
 				84E60C8D1D69A1D300160D8F /* BaseUIView.m in Sources */,
 				84E60C741D684E6D00160D8F /* SearchAddressViewModel.m in Sources */,
 				84E60C7F1D69840500160D8F /* APIController.m in Sources */,
 				84E60C6B1D684CC900160D8F /* CETableViewBindingHelper.m in Sources */,
 				84E60C5E1D6845ED00160D8F /* AddressPickerViewController.m in Sources */,
+				84E00A9A1D71FCCA003B7344 /* SearchRecentModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,8 @@ typedef void (^DTAddressPickerBlock)(id object, NSError *error);
 
 @interface AddressPickerViewController : BaseViewController {
     __weak IBOutlet UITextField *searchTextField;
-    __weak IBOutlet UITableView *resultTableView;
-    __weak IBOutlet UIView *resultView;
+    __weak IBOutlet UITableView *resultTableView, *historyTableView;
+    __weak IBOutlet UIView *resultView, *historyView;
     __weak IBOutlet UIButton *yourLocationButton;
 
 }

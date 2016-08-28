@@ -7,6 +7,7 @@
 //
 
 #import "SearchAddressViewModel.h"
+#import "SearchRecentModelFactory.h"
 
 
 @interface SearchAddressViewModel ()
@@ -47,6 +48,12 @@
                                                      return [self executeSearchSignal];
                                                  }];
     
+    [self getSearchHistory];
+}
+
+- (void)getSearchHistory {
+    
+    self.searchHistories = [SearchRecentModelFactory getListSavedRecentModel];
 }
 
 - (RACSignal *)executeSearchSignal {
@@ -61,11 +68,23 @@
     @weakify(self)
     return [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         @strongify(self)
+        [SearchRecentModelFactory saveSearchPrediction:input];
         return [[self.services getPlaceInfoSignalWithPlace:[input placeID]]
                 doNext:^(id x) {
                     self.selectedPlace = [[DTPlace alloc] initWithGMSPlace:x];
                 }];
         
+    }];
+}
+
+- (RACCommand*)getSelectionHistorySearchCommand {
+    @weakify(self)
+    return [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        @strongify(self)
+        return [[self.services getPlaceInfoSignalWithPlace:[input placeID]]
+                doNext:^(id x) {
+                    self.selectedPlace = [[DTPlace alloc] initWithGMSPlace:x];
+                }];
     }];
 }
 

@@ -70,6 +70,32 @@ describe(@"Select a prediction", ^{
         expect(error).to.beNil();
         expect(viewModel.selectedPlace).to.beTruthy();
     });
+    
+    it (@"Should assert that selectedPlace is not nil after choose recent history", ^{
+        NSError *error = nil;
+        BOOL success = [[[viewModel getSelectionHistorySearchCommand] execute:prediction] asynchronouslyWaitUntilCompleted:&error];
+        expect(success).to.beTruthy();
+        expect(error).to.beNil();
+        expect(viewModel.selectedPlace).to.beTruthy();
+    });
+});
+
+describe(@"Select a recent history", ^{
+    __block FakeGMSPrediction *recentModel;
+    
+    beforeAll(^ {
+        recentModel = [[FakeGMSPrediction alloc] init];
+        recentModel.placeID = @"EhtUcuG6p24gUGjDuiwgSGFub2ksIFZpZXRuYW0";
+        viewModel = [[SearchAddressViewModel alloc] initWithServices:_searchServices withModel:nil];
+    });
+    
+    it (@"Should assert that selectedPlace is not nil after choose recent history", ^{
+        NSError *error = nil;
+        BOOL success = [[[viewModel getSelectionHistorySearchCommand] execute:recentModel] asynchronouslyWaitUntilCompleted:&error];
+        expect(success).to.beTruthy();
+        expect(error).to.beNil();
+        expect(viewModel.selectedPlace).to.beTruthy();
+    });
 });
 
 describe(@"Select current place", ^{
@@ -87,6 +113,7 @@ describe(@"Select current place", ^{
         expect(error).to.beNil();
         expect(viewModel.selectedPlace).to.equal(currentPlace);
     });
+    
 });
 
 SpecEnd

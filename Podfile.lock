@@ -47,6 +47,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.1.8)
   - ReactiveViewModel (0.2):
     - ReactiveCocoa (~> 2.1)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
   - Specta (0.2.1)
 
 DEPENDENCIES:
@@ -62,6 +65,7 @@ DEPENDENCIES:
   - PermissionScope
   - ReactiveCocoa (= 2.1.8)
   - ReactiveViewModel
+  - Realm
   - Specta (~> 0.2.1)
 
 SPEC CHECKSUMS:
@@ -77,8 +81,9 @@ SPEC CHECKSUMS:
   PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
   ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
   ReactiveViewModel: 3b25ab68711944b1706b9dd6d1b37f37cbe6b094
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
 
-PODFILE CHECKSUM: a9b77ea18f99091aab7cc4b20d49ace42098a27d
+PODFILE CHECKSUM: 088c314473aed8ec8b50e8eb4a91278d7311cc8d
 
 COCOAPODS: 1.1.0.beta.1

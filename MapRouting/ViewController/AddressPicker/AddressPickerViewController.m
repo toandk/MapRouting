@@ -9,6 +9,7 @@
 #import "AddressPickerViewController.h"
 #import "CETableViewBindingHelper.h"
 #import "AddressTableViewCell.h"
+#import "SearchHistoryCell.h"
 #import "SearchAddressServices.h"
 #import "LocationManager.h"
 #import "AppConfig.h"
@@ -57,11 +58,14 @@
         if ([[LocationManager sharedManager] isCurrentLocation:self.viewModel.defaultPlace.coordinate])
             searchTextField.text = @"Your location";
         else searchTextField.text = self.viewModel.defaultPlace.name;
+        resultView.hidden = NO;
     }
     yourLocationButton.hidden = !self.viewModel.currentPlace;
     float posY = self.viewModel.currentPlace ? yourLocationButton.frame.origin.y + yourLocationButton.frame.size.height :
                 yourLocationButton.frame.origin.y;
     resultView.frame = CGRectMake(resultView.frame.origin.x, posY, resultView.frame.size.width, self.view.frame.size.height - posY - 10);
+    historyView.frame = CGRectMake(historyView.frame.origin.x, posY + 10, historyView.frame.size.width, self.view.frame.size.height - posY - 20);
+
 }
 
 - (void)bindTableView {
@@ -70,6 +74,11 @@
                                            sourceSignal:RACObserve(self.viewModel, searchResults)
                                        selectionCommand:[self.viewModel getSelectionAddressCommand]
                                            templateCell:[AddressTableViewCell nib]];
+    
+    [CETableViewBindingHelper bindingHelperForTableView:historyTableView
+                                           sourceSignal:RACObserve(self.viewModel, searchHistories)
+                                       selectionCommand:[self.viewModel getSelectionHistorySearchCommand]
+                                           templateCell:[SearchHistoryCell nib]];
 }
 
 - (void)bindViewModel {

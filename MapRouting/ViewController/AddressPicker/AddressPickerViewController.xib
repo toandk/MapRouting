@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressPickerViewController">
             <connections>
+                <outlet property="historyTableView" destination="8yO-mO-9tH" id="APb-k6-3IE"/>
+                <outlet property="historyView" destination="AbV-l1-qAC" id="IkD-O0-1oq"/>
                 <outlet property="resultTableView" destination="Ca2-Bg-2ql" id="DL0-8L-IJn"/>
                 <outlet property="resultView" destination="2u0-Ls-bbB" id="EtL-lV-gzH"/>
                 <outlet property="searchTextField" destination="TIP-cX-z64" id="yso-O7-4Ir"/>
@@ -75,6 +77,31 @@
                         <outlet property="delegate" destination="-1" id="kX0-J8-yaZ"/>
                     </connections>
                 </textField>
+                <view contentMode="scaleToFill" id="AbV-l1-qAC">
+                    <rect key="frame" x="8" y="160" width="304" height="403"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i-row-bottom" id="tFA-9t-2xM">
+                            <rect key="frame" x="0.0" y="40" width="304" height="363"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <rect key="contentStretch" x="0.20000000000000001" y="0.20000000000000001" width="0.0" height="0.0"/>
+                        </imageView>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vMi-aG-zPV">
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="40"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <state key="normal" title="Recent history" backgroundImage="i-row-top">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8yO-mO-9tH">
+                            <rect key="frame" x="1" y="41" width="302" height="361"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view hidden="YES" contentMode="scaleToFill" id="2u0-Ls-bbB">
                     <rect key="frame" x="8" y="150" width="304" height="413"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
