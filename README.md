@@ -8,6 +8,7 @@ Main features:
 - Choose starting point/destination by selecting on the map.
 - Choose starting point/destination by using current location (while enabling location service)
 - Choose transporting method: driving, transit, walking or bicycling
+- Choose places from search recent history
 - Draw routing path on the map base on starting point/destination and transporting mode
 - Swap starting point and destination location
 
@@ -15,6 +16,8 @@ Main features:
 App using map and places data of GoogleMaps [SDK for iOS](https://developers.google.com/maps/documentation/ios-sdk/)
 
 Code using MVVM design patern, bases on [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) library for Objective-C. Unit tests using [Specta](https://github.com/specta/specta) and [Expecta](https://github.com/specta/expecta)
+
+![image](https://github.com/toandk/MapRouting/blob/master/gif/mr2.gif?raw=true)
 
 ### Compatibility
 Support iOS 8.0+
