@@ -33,7 +33,7 @@ Open 'MapRouting.xcworkspace' and Run (CMD + R)
 ### Testing
 Open workspace on XCode and run test (CMD + U).
 
-There are 8 unit tests and can be deployed into a CI server.
+There are 10 unit tests and can be deployed into a CI server.
 
 ### Crash report
 Show on [fabric.io Crashlytics](https://fabric.io/tttt3/ios/apps/toandk.maprouting/issues?build=all&event_type=all&time=last-seven-days)

@@ -12,7 +12,7 @@
 #import "BaseViewController.h"
 #import "MapRoutingViewModel.h"
 
-@interface MapRoutingViewController : BaseViewController {
+@interface MapRoutingViewController : BaseViewController<GMSMapViewDelegate> {
     __weak IBOutlet GMSMapView *myMapView;
     __weak IBOutlet UITextField *startPointTextField, *stopPointTextField;
     __weak IBOutlet UIButton *reverveDirectionButton;

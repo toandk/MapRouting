@@ -37,4 +37,6 @@ typedef enum {
 
 - (RACSignal*)getCurrentPlaceSignal;
 
+- (void)changeLocation:(CLLocationCoordinate2D)location forStartPlace:(BOOL)isStartPlace;
+
 @end

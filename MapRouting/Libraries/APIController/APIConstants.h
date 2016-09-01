@@ -9,6 +9,9 @@
 #ifndef APIConstants_h
 #define APIConstants_h
 
-#define GET_MAP_DIRECTIONS      @"https://maps.googleapis.com/maps/api/directions/json"
+#define GET_MAP_DIRECTIONS          @"https://maps.googleapis.com/maps/api/directions/json"
+#define SEARCH_PLACES               @"https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+#define SEARCH_PLACES_AUTOCOMPLETE           @"https://maps.googleapis.com/maps/api/place/autocomplete/json"
+#define QUERY_PLACES_AUTOCOMPLETE           @"https://maps.googleapis.com/maps/api/place/autocomplete/json"
 
 #endif /* APIConstants_h */

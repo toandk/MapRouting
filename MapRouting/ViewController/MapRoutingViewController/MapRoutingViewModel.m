@@ -11,6 +11,7 @@
 #import "APIController+Map.h"
 #import "LocationManager.h"
 #import "AppConfig.h"
+#import "APIController+Map.h"
 
 @interface MapRoutingViewModel () {
     GMSPlacesClient *placeClient;
@@ -101,6 +102,26 @@
     _transportMode = transportMode;
     if (_startPlace && _stopPlace)
         [self.loadMapRoutingCommand execute:nil];
+}
+
+- (void)changeLocation:(CLLocationCoordinate2D)location forStartPlace:(BOOL)isStartPlace {
+    @weakify(self);
+    [[APIController sharedController] searchFirstPlaceWithLocation:location completionHandler:^(NSError *error, id object) {
+        @strongify(self);
+        DTPlace *newPlace = [[DTPlace alloc] init];
+        newPlace.coordinate = location;
+        if (object) {
+            newPlace.name = object[@"name"];
+            newPlace.placeID = object[@"place_id"];
+        }
+        else {
+            newPlace.name = [NSString stringWithFormat:@"(%f, %f)", location.latitude, location.longitude];
+        }
+        if (isStartPlace) {
+            self.startPlace = newPlace;
+        }
+        else self.stopPlace = newPlace;
+    }];
 }
 
 #pragma mark Getters

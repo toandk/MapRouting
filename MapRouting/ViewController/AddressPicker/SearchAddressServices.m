@@ -8,9 +8,10 @@
 //
 
 #import "SearchAddressServices.h"
-
+#import "LocationManager.h"
 #import <ReactiveCocoa/RACEXTScope.h>
-
+#import "APIController+Map.h"
+#import "AppConfig.h"
 
 
 @interface SearchAddressServices ()<GMSAutocompleteFetcherDelegate> {
@@ -32,16 +33,22 @@
 
 - (void)setupFetcher {
     GMSAutocompleteFilter *filter = [[GMSAutocompleteFilter alloc] init];
-    filter.type = kGMSPlacesAutocompleteTypeFilterAddress;
+//    filter.type = kGMSPlacesAutocompleteTypeFilterAddress;
     
-    CLLocationCoordinate2D neBoundsCorner = CLLocationCoordinate2DMake(20.7639049,101.0939519);
-    CLLocationCoordinate2D swBoundsCorner = CLLocationCoordinate2DMake(15.1599211,101.0221149);
+//    CLLocationCoordinate2D neBoundsCorner = CLLocationCoordinate2DMake(20.7639049,101.0939519);
+//    CLLocationCoordinate2D swBoundsCorner = CLLocationCoordinate2DMake(15.1599211,101.0221149);
+    CLLocationCoordinate2D currentLocation = [[LocationManager sharedManager] currentLocation];
+    if (currentLocation.latitude == 0 && currentLocation.longitude == 0)
+        currentLocation = CLLocationCoordinate2DMake(DEFAULT_LATITUDE, DEFAULT_LONGITUDE);
+    CLLocationCoordinate2D neBoundsCorner = CLLocationCoordinate2DMake(currentLocation.latitude - 0.01, currentLocation.longitude - 0.01);
+    CLLocationCoordinate2D swBoundsCorner = CLLocationCoordinate2DMake(currentLocation.latitude + 0.01, currentLocation.longitude + 0.01);
     GMSCoordinateBounds *VietNamBounds = [[GMSCoordinateBounds alloc] initWithCoordinate:neBoundsCorner
                                                                        coordinate:swBoundsCorner];
     
     // Create the fetcher.
     _fetcher = [[GMSAutocompleteFetcher alloc] initWithBounds:VietNamBounds
                                                        filter:filter];
+
     _fetcher.delegate = self;
 }
 

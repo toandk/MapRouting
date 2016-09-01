@@ -28,7 +28,7 @@
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 - (void)showAlertWithTitle:(NSString*)title withMessage:(NSString*)message {

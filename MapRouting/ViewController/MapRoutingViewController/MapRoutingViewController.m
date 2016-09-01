@@ -26,6 +26,7 @@
     [super viewDidLoad];    
     
     [myMapView setMyLocationEnabled:YES];
+    myMapView.delegate = self;
     [self setupDefaultLocation];
     [self bindViewModel];
 }
@@ -88,7 +89,7 @@
     for (GMSMarker *marker in listMarkers)
         bounds = [bounds includingCoordinate:marker.position];
     
-    [myMapView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:bounds withPadding:50.0f]];
+    [myMapView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:bounds withEdgeInsets:UIEdgeInsetsMake(100, 50, 200, 50)]];
 
 }
 
@@ -147,13 +148,12 @@
             startPointTextField.text = @"Your location";
         else startPointTextField.text = self.viewModel.startPlace.formattedAddress;
         GMSMarker *marker = [GMSMarker markerWithPosition:self.viewModel.startPlace.coordinate];
-        UIImage *icon = [UIImage imageNamed:@"ic_cu_location"];
-        icon = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        UIImageView *_iconView = [[UIImageView alloc] initWithImage:icon];
-        marker.iconView = _iconView;
+//        marker.icon = [GMSMarker markerImageWithColor:[UIColor colorWithRed:123.0/255 green:218.0/255 blue:0 alpha:1.0]];
+        marker.icon = [UIImage imageNamed:@"location_pin_blue"];
         marker.title = @"Starting point";
         marker.map = myMapView;
-        _iconView.tintColor = [UIColor purpleColor];
+        marker.draggable = YES;
+        marker.userData = @"startingPoint";
         [markers addObject:marker];
         [myMapView setSelectedMarker:marker];
     }
@@ -165,8 +165,11 @@
             stopPointTextField.text = @"Your location";
         else stopPointTextField.text = self.viewModel.stopPlace.formattedAddress;
         GMSMarker *marker = [GMSMarker markerWithPosition:self.viewModel.stopPlace.coordinate];
+        marker.icon = [UIImage imageNamed:@"location_pin"];
         marker.title = @"Destination";
         marker.map = myMapView;
+        marker.draggable = YES;
+        marker.userData = @"Destination";
         [markers addObject:marker];
         [myMapView setSelectedMarker:marker];
     }
@@ -197,7 +200,7 @@
     NSInteger tag = [sender tag];
     for (UIButton *button in listTransportButton) {
         if (button.tag == tag) {
-            button.tintColor = [UIColor whiteColor];
+            button.tintColor = [UIColor colorWithRed:0 green:122.0/255 blue:1.0 alpha:1.0];
         }
         else button.tintColor = [UIColor colorWithRed:190.0/255 green:213.0/255 blue:251.0/255 alpha:1.0];
     }
@@ -210,6 +213,16 @@
     CLLocationCoordinate2D location = [[LocationManager sharedManager] currentLocation];
     if (location.longitude != 0 && location.latitude != 0)
         [myMapView animateToLocation:location];
+}
+
+#pragma mark GMSMapView delegate
+- (void)mapView:(GMSMapView *)mapView didEndDraggingMarker:(GMSMarker *)marker {
+    if ([marker.userData isEqualToString:@"startingPoint"]) {
+        [self.viewModel changeLocation:marker.position forStartPlace:YES];
+    }
+    else {
+        [self.viewModel changeLocation:marker.position forStartPlace:YES];
+    }
 }
 
 @end

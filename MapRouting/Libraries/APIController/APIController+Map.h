@@ -16,4 +16,7 @@
                    withMode:(NSString*)mode
           completionHandler:(GCAPIResponseBlock)completionHandler;
 
+- (void)searchFirstPlaceWithLocation:(CLLocationCoordinate2D)location
+                   completionHandler:(GCAPIResponseBlock)completionHandler;
+
 @end

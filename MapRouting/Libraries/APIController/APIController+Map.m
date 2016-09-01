@@ -27,4 +27,26 @@
     }];
 }
 
+- (void)searchFirstPlaceWithLocation:(CLLocationCoordinate2D)location
+             completionHandler:(GCAPIResponseBlock)completionHandler {
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   @"vi", @"language",
+                                   [NSString stringWithFormat:@"%f,%f", location.latitude, location.longitude], @"location",
+                                   GOOGLE_MAP_API_KEY, @"key",
+                                   @(100), @"radius",
+                                   @"distance", @"ranky",
+                                   @"establishment", @"type",
+                                   nil];
+    
+    [self GETRequestWithUrl:SEARCH_PLACES params:params completionHandler:^(NSError *error, id object) {
+        if (!error && object[@"results"] && [object[@"results"] count] > 0) {
+            NSArray *results = object[@"results"];
+            completionHandler(nil, results[0]);
+        }
+        else {
+            completionHandler(error, nil);
+        }
+    }];
+}
+
 @end
