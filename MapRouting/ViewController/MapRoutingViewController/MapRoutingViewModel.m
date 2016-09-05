@@ -66,6 +66,7 @@
             @strongify(self);
             if (!error) {
                 if (response[@"routes"] && [response[@"routes"] count] > 0) {
+                    self.mapBounds = response[@"routes"][0][@"bounds"];
                     NSString *encodedPoints = response[@"routes"][0][@"overview_polyline"][@"points"];
                     self.encodedRoutingPoints = encodedPoints;
                 }

@@ -11,5 +11,7 @@
 @interface FakeGMSPrediction : NSObject
 
 @property (nonatomic, strong) NSString *placeID;
+@property (nonatomic, strong) NSAttributedString *attributedPrimaryText;
+@property (nonatomic, strong) NSAttributedString *attributedSecondaryText;
 
 @end

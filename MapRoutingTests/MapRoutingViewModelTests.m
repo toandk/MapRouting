@@ -76,6 +76,7 @@ describe(@"Load map routing", ^{
         BOOL success = [viewModel.loadingMapRoutingSignal asynchronouslyWaitUntilCompleted:&error];
         expect(success).to.beTruthy();
         expect(error).to.beNil();
+        expect(viewModel.mapBounds).to.beTruthy();
         expect(viewModel.encodedRoutingPoints).notTo.equal(NO_ROUTE_KEY);
     });
     

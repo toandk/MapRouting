@@ -62,6 +62,7 @@
          @strongify(self);
          [self removeOldRoutingLine];
          [self drawMapRoutingWithPoints:x];
+         [self centerMapToViewAllMarkers:self.viewModel.mapBounds];
       }];
     
     reverveDirectionButton.rac_command = self.viewModel.reverseDirectionCommand;
@@ -72,22 +73,19 @@
     [self centerMapWithCoordinate:CLLocationCoordinate2DMake(DEFAULT_LATITUDE, DEFAULT_LONGITUDE)];
 }
 
-- (void)centerMapToViewAllMarkers:(NSArray*)listMarkers {
-    if (listMarkers.count != 2) return;
-    GMSMarker *marker1 = listMarkers[0];
-    GMSMarker *marker2 = listMarkers[1];
-    CLLocation *location1 = [[CLLocation alloc] initWithLatitude:marker1.position.latitude longitude:marker1.position.longitude];
-    CLLocation *location2 = [[CLLocation alloc] initWithLatitude:marker2.position.latitude longitude:marker2.position.longitude];
+- (void)centerMapToViewAllMarkers:(NSDictionary*)mapBounds {
+    if (!mapBounds) return;
+    NSDictionary *northeast = mapBounds[@"northeast"];
+    NSDictionary *southwest = mapBounds[@"southwest"];
+    CLLocation *location1 = [[CLLocation alloc] initWithLatitude:[northeast[@"lat"] floatValue] longitude:[northeast[@"lng"] floatValue]];
+    CLLocation *location2 = [[CLLocation alloc] initWithLatitude:[southwest[@"lat"] floatValue] longitude:[southwest[@"lng"] floatValue]];
     CLLocationDistance distance = [location1 distanceFromLocation:location2];
     if (distance < 100) {
         [self centerMapWithCoordinate:location1.coordinate];
         return;
     }
     
-    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] init];
-    
-    for (GMSMarker *marker in listMarkers)
-        bounds = [bounds includingCoordinate:marker.position];
+    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] initWithCoordinate:location1.coordinate coordinate:location2.coordinate];
     
     [myMapView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:bounds withEdgeInsets:UIEdgeInsetsMake(100, 50, 200, 50)]];
 
@@ -141,20 +139,16 @@
 - (void)updateUI {
     [myMapView clear];
     
-    NSMutableArray *markers = [NSMutableArray array];
-    
     if (self.viewModel.startPlace) {
         if ([[LocationManager sharedManager] isCurrentLocation:self.viewModel.startPlace.coordinate])
             startPointTextField.text = @"Your location";
         else startPointTextField.text = self.viewModel.startPlace.formattedAddress;
         GMSMarker *marker = [GMSMarker markerWithPosition:self.viewModel.startPlace.coordinate];
-//        marker.icon = [GMSMarker markerImageWithColor:[UIColor colorWithRed:123.0/255 green:218.0/255 blue:0 alpha:1.0]];
         marker.icon = [UIImage imageNamed:@"location_pin_blue"];
         marker.title = @"Starting point";
         marker.map = myMapView;
         marker.draggable = YES;
         marker.userData = @"startingPoint";
-        [markers addObject:marker];
         [myMapView setSelectedMarker:marker];
     }
     else {
@@ -170,14 +164,10 @@
         marker.map = myMapView;
         marker.draggable = YES;
         marker.userData = @"Destination";
-        [markers addObject:marker];
         [myMapView setSelectedMarker:marker];
     }
     else {
         stopPointTextField.text = @"";
-    }
-    if (markers.count == 2) {
-        [self centerMapToViewAllMarkers:markers];
     }
 }
 
@@ -221,7 +211,7 @@
         [self.viewModel changeLocation:marker.position forStartPlace:YES];
     }
     else {
-        [self.viewModel changeLocation:marker.position forStartPlace:YES];
+        [self.viewModel changeLocation:marker.position forStartPlace:NO];
     }
 }
 

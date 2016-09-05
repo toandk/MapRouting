@@ -32,6 +32,7 @@ typedef enum {
 @property (nonatomic, strong) RACCommand *reverseDirectionCommand;
 @property (nonatomic, strong) RACSignal *loadingMapRoutingSignal;
 @property (nonatomic, strong) NSString *encodedRoutingPoints;
+@property (nonatomic, strong) NSDictionary *mapBounds;
 
 - (SearchAddressViewModel*)getAddressPickerViewModel:(DTPlace*)place;
 
