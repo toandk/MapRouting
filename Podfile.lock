@@ -38,7 +38,7 @@ PODS:
   - GooglePlaces (2.0.1):
     - GoogleMaps/Base (= 2.0.1)
   - OCMock (2.2.4)
-  - PermissionScope (1.0.2)
+  - PermissionScope (1.1.1)
   - ReactiveCocoa (2.1.8):
     - ReactiveCocoa/Core (= 2.1.8)
     - ReactiveCocoa/no-arc (= 2.1.8)
@@ -62,11 +62,20 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - OCMock (~> 2.2.1)
-  - PermissionScope
+  - PermissionScope (from `git@github.com:nickoneill/PermissionScope.git`)
   - ReactiveCocoa (= 2.1.8)
   - ReactiveViewModel
   - Realm
   - Specta (~> 0.2.1)
+
+EXTERNAL SOURCES:
+  PermissionScope:
+    :git: git@github.com:nickoneill/PermissionScope.git
+
+CHECKOUT OPTIONS:
+  PermissionScope:
+    :commit: 629a43772b49ae836b7e8062e822b85221af1288
+    :git: git@github.com:nickoneill/PermissionScope.git
 
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
@@ -78,12 +87,12 @@ SPEC CHECKSUMS:
   GooglePlacePicker: e7b11b732e40dbe76e8ab4c5fc2f4a7c32b96578
   GooglePlaces: 72fab1d1651c6df0322f2aad245ffb15b80d3c56
   OCMock: a6a7dc0e3997fb9f35d99f72528698ebf60d64f2
-  PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
+  PermissionScope: a30c16e015779ba27c97c124e7539e27b5829de2
   ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
   ReactiveViewModel: 3b25ab68711944b1706b9dd6d1b37f37cbe6b094
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
 
-PODFILE CHECKSUM: 088c314473aed8ec8b50e8eb4a91278d7311cc8d
+PODFILE CHECKSUM: 3f7cef306cefc73f138424605acd883251bd381b
 
 COCOAPODS: 1.1.0.beta.1

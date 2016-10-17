@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, ‘8.0’
+# platform :ios, '8.0'
 
 use_frameworks!
 
@@ -15,7 +15,7 @@ target 'MapRouting' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
-    pod 'PermissionScope'
+    pod 'PermissionScope', git: "git@github.com:nickoneill/PermissionScope.git"
     pod 'Realm'
 end
 
@@ -27,7 +27,7 @@ target 'MapRoutingTests' do
     pod 'GoogleMaps'
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
-    pod 'PermissionScope'
+    pod 'PermissionScope', git: "git@github.com:nickoneill/PermissionScope.git"
     pod 'Specta', '~> 0.2.1'
     pod 'Expecta', '~> 0.3.0'
     pod 'OCMock',      '~> 2.2.1'
